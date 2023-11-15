@@ -6,9 +6,10 @@ class Checklist : Goal {
     private int _spBonusPointValue;
     private bool _spIsComplete;
 
-    public Checklist(string goalType, string description, int difficultyLevel, int timesToDo) : base(goalType, description, difficultyLevel){
+    public Checklist(string goalType, string description, int difficultyLevel, int timesToDo, int timesDone, bool isComplete) : base(goalType, description, difficultyLevel){
         _spTimesToDo = timesToDo;
-        _spIsComplete = false;
+        _spTimesDone = timesDone;
+        _spIsComplete = isComplete;
     }
 
     private void SpCountTimesDone(){
